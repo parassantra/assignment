@@ -97,7 +97,7 @@ public class TestSteps {
 	 * @param quantity
 	 * @throws InterruptedException
 	 */
-	public void addToCart(String productName, String quantity) throws InterruptedException {
+	public void addToCart(String productName, String quantity) {
 		AddToCartPage addToCartPage = new AddToCartPage(driver);
 		WebElement addToCartButton = AddToCartPage.getAddToCartButton();
 		Assert.assertTrue(addToCartButton.isDisplayed());
@@ -123,12 +123,11 @@ public class TestSteps {
 	 * Proceed to checkOut
 	 * @throws InterruptedException
 	 */
-	public void proceedToOrder() throws InterruptedException {
+	public void proceedToOrder() {
 		ProceedToCheckOutPage proceedToCheckOutPage = new ProceedToCheckOutPage(driver);
 		WebElement proceedToCheckOutButton = ProceedToCheckOutPage.getProceedCheckOutButton();
 		new TestBase().getNavigationScreen(driver);
 		proceedToCheckOutButton.click();
-		Thread.sleep(5000);
 		LoginPage loginPage = new LoginPage(driver);
 		WebElement emailAddressInput = LoginPage.getEmailAddressPhoneNo();
 		Assert.assertTrue(emailAddressInput.isDisplayed());
