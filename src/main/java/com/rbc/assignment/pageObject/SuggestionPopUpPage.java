@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.rbc.assignment.helper.browserConfigurations.config.ObjectReader;
 import com.rbc.assignment.helper.logger.LoggerHelper;
 import com.rbc.assignment.helper.wait.WaitHelper;
-import com.rbc.assignment.testbase.TestBase;
+
 
 public class SuggestionPopUpPage {
 

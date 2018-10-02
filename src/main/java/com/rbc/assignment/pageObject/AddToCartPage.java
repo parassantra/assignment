@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import com.rbc.assignment.helper.logger.LoggerHelper;
-import com.rbc.assignment.helper.browserConfigurations.config.ObjectReader;
 import com.rbc.assignment.helper.wait.WaitHelper;
 import com.rbc.assignment.testbase.TestBase;
 
@@ -61,8 +60,8 @@ public class AddToCartPage {
 	}
 	
 	/**
+	 * text of webelement
 	 * @return 
-	 * 
 	 */
 	public String getText(WebElement element) {
 		return element.getText();
