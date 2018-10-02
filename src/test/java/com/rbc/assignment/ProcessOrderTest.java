@@ -11,7 +11,7 @@ import com.rbc.assignment.testbase.TestBase;
 public class ProcessOrderTest extends TestBase{
 	
 	@Test(dataProvider = "kindlePurchase", description="Process Order (Kindle Paper White)")
-	public void processOrderForProduct(String productCategory, String productName, String quantity) throws InterruptedException{
+	public void processOrderForProduct(String productCategory, String productName, String quantity){
 		TestSteps steps = new TestSteps(driver);
 		steps.getApplication();
 		steps.gotoShopByDepartment();
