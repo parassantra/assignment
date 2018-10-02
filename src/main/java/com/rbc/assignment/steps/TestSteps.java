@@ -38,6 +38,9 @@ public class TestSteps {
 		new TestBase().getNavigationScreen(driver);
 	}
 	
+	/**
+	 * goto shop by department on homepage
+	 */
 	public void gotoShopByDepartment() {
 		HomePage homePage = new HomePage(driver);
 		WebElement shopByDepartment = HomePage.getShopByDepatment();
@@ -51,6 +54,11 @@ public class TestSteps {
 		TestBase.logExtentReport("Shop By Department Table is Displayed");
 	}
 	
+	/**
+	 * select product using product category and product Name
+	 * @param productCategory
+	 * @param productName
+	 */
 	public void selectProductByCategory(String productCategory, String productName) {
 		HomePage homePage = new HomePage(driver);
 		WebElement category = homePage.getProductCategory(productCategory);
@@ -68,6 +76,10 @@ public class TestSteps {
 		TestBase.logExtentReport("Correct product Added to cart: " + productName);
 	}
 	
+	/**
+	 * Increase quantity of product in Add to cart Page
+	 * @param quantity
+	 */
 	public void increaseProductQuantity(String quantity) {
 		AddToCartPage addToCartPage = new AddToCartPage(driver);
 		WebElement quantityDropDown = AddToCartPage.getQuantityDropDown();
@@ -79,6 +91,12 @@ public class TestSteps {
 		TestBase.logExtentReport("Product quantity:" + quantity);
 	}
 	
+	/**
+	 * Add Product to cart
+	 * @param productName
+	 * @param quantity
+	 * @throws InterruptedException
+	 */
 	public void addToCart(String productName, String quantity) throws InterruptedException {
 		AddToCartPage addToCartPage = new AddToCartPage(driver);
 		WebElement addToCartButton = AddToCartPage.getAddToCartButton();
@@ -101,6 +119,10 @@ public class TestSteps {
 		TestBase.logExtentReport("Checked Out  " + productName + " quantity "+quantity);
 	}
 	
+	/**
+	 * Proceed to checkOut
+	 * @throws InterruptedException
+	 */
 	public void proceedToOrder() throws InterruptedException {
 		ProceedToCheckOutPage proceedToCheckOutPage = new ProceedToCheckOutPage(driver);
 		WebElement proceedToCheckOutButton = ProceedToCheckOutPage.getProceedCheckOutButton();
