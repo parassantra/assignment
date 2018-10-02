@@ -3,9 +3,7 @@ package com.rbc.assignment.steps;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-
 import com.rbc.assignment.helper.browserConfigurations.config.ObjectReader;
 import com.rbc.assignment.helper.browserConfigurations.config.PropertyReader;
 import com.rbc.assignment.helper.logger.LoggerHelper;
@@ -34,6 +32,8 @@ public class TestSteps {
 	 */
 	public void getApplication() {
 		driver.get(url);
+		HomePage homePage = new HomePage(driver);
+		Assert.assertTrue(HomePage.getLogo().isDisplayed());
 		TestBase.logExtentReport("Navigating to ..."+ url);
 		new TestBase().getNavigationScreen(driver);
 	}

@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.rbc.assignment.helper.logger.LoggerHelper;
-import com.rbc.assignment.helper.wait.WaitHelper;
-import org.openqa.selenium.support.ui.Select;
 import com.rbc.assignment.testbase.TestBase;
 
 /**
@@ -47,6 +45,7 @@ public class ProceedToCheckOutPage {
 	}
 	
 	/**
+	 * get text of element
 	 * @return 
 	 * 
 	 */
